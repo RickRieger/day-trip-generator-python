@@ -154,8 +154,7 @@ def handle_final_message(choices_obj):
     print(
         f'When you are hungry you will have directions to the {restaurant_chosen} we picked out for you.')
     print('Thank you for booking with us and enjoy your stay!')
-    print('Arbitrary explanation mark !')
-    print('This time two!!')
+
 
 
 greet_and_get_user_input()
