@@ -1,5 +1,4 @@
 import random
-from tkinter import N
 
 # Lists with data
 destination_list = ['New York', 'Paris', 'Oslo', 'Dublin', 'Tokyo', 'St Thomas']
@@ -46,14 +45,16 @@ def greet_and_get_user_input():
 
 # Provides random element from a list
 
-
-def provide_random_item_from_list(list, previous_element=''):
-    index = random.randrange(0, len(list))
-    new_element = list[index]
-    if previous_element != new_element:
-        return new_element
-    else:
-        return provide_random_item_from_list(list, previous_element)
+# I attempted to make the function return non-repeating values.  It still repeats on occasion, if you can 
+# see why this is I would appreciate it :)
+def provide_random_item_from_list(selected_list, previous_element=''):
+    print('#####',previous_element)
+    index = random.randrange(0, len(selected_list))
+    new_element = selected_list[index]
+    while previous_element == new_element:
+         index = random.randrange(0, len(selected_list))
+         new_element = selected_list[index]
+    return new_element
 
 
 # Interaction with user
